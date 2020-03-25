@@ -9,6 +9,18 @@ class Product
   end
 
   def total_price
-    @unit_price * @quantity
+    total = @unit_price * @quantity
+    total.ceil.to_f
+  end
+
+  def hoard
+  end
+  
+  def is_hoarded?
+    if quantity > 2
+      true
+    else
+      false
+    end
   end
 end
