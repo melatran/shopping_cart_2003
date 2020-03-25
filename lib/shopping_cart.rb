@@ -10,4 +10,16 @@ class ShoppingCart
   def add_product(item)
     @products << item
   end
+
+  def total_number_of_products
+    sum += product.quantity
+  end
+
+  def products_by_category(product_type)
+    item_category = @products.select do |product|
+      product.category == product_type
+    end
+
+    item_category
+  end
 end
