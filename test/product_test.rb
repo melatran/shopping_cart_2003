@@ -35,7 +35,7 @@ class ProductTest < Minitest::Test
     product2 = Product.new(:meat, 'chicken', 4.50, '2')
 
     assert_equal 37.0, product1.total_price
-    assert_equal 8.0, product2.total_price
+    assert_equal 9.0, product2.total_price
   end
 
   def test_it_can_hoard
