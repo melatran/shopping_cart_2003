@@ -4,23 +4,21 @@ class Product
   def initialize(category, name, unit_price, quantity)
     @category = category
     @name = name
-    @unit_price = 3.70
+    @unit_price = unit_price
     @quantity = quantity.to_i
+    @hoard = false
   end
 
   def total_price
     total = @unit_price * @quantity
-    total.ceil.to_f
+    total.to_f
   end
 
   def hoard
+    true
   end
-  
+
   def is_hoarded?
-    if quantity > 2
-      true
-    else
-      false
-    end
+    hoard
   end
 end
